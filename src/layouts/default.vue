@@ -1,14 +1,18 @@
 <template>
-  <div class="flex">
-    <router-link to="/">首页</router-link>
-    <a href="https://www.example.com" target="_blank">社区</a>
-    <router-link to="/study">学习</router-link>
-    <router-link to="/about">关于</router-link>
+  <div class="fixed top-0 w-full"
+    :class="{'bg-black bg-opacity-30 shadow-lg': y > 0}">
+    <Container>
+      <img src="/512x512.png" class="w-14 h-full" alt="logo" />
+      <Menu />
+    </Container>
   </div>
   <router-view></router-view>
+  <div class="h-[4000px]"></div>
   <div>footer</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { y } = useWindowScroll();
+</script>
 
 <style scoped></style>

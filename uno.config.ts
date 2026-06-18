@@ -1,7 +1,7 @@
 // uno.config.ts
 import { defineConfig } from 'unocss'
 // import presetWind from '@unocss/preset-wind'
-import { presetWind, presetIcons } from 'unocss'
+import { presetWind, presetIcons, transformerDirectives } from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -12,5 +12,14 @@ export default defineConfig({
         display: 'inline-block'
       }
     })
-  ]
+  ],
+  // 支持css写法的@apply tailwind css
+  transformers: [
+    transformerDirectives(),
+  ],
+  // 全局设置的
+  shortcuts: {
+    'route-link': 'text-white text-2xl px-8 py-2 cursor font-300 hover:font-500'
+  }
+
 })

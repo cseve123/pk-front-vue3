@@ -1,0 +1,25 @@
+<template>
+  <div class="flex">
+    <router-link class="route-link" to="/">首页</router-link>
+    <a class="item" href="https://www.example.com" target="_blank">社区</a>
+    <router-link class="item" to="/study">学习</router-link>
+    <router-link class="item" to="/about">关于</router-link>
+  </div>
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped lang="scss">
+.item {
+  @apply relative text-white text-2xl px-8 py-2 cursor font-300 cursor-pointer;
+  &:hover {
+    @apply font-500;
+    &::after {
+      @apply content-none absolute bg-gray-100 w-8 h-[1px] bottom-0 left-[calc(50%-1rem)];
+    }
+  }
+}
+
+</style>
