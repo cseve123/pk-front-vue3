@@ -1,6 +1,7 @@
 <template>
   <div>
     <Swiper :items="items" height="h-90" />
+    <Card :image="bg" title="标题" subTitle="副标题" imageType="rounded" border />
   </div>
 </template>
 

@@ -7,7 +7,6 @@
     :space-between="0"
     :navigation="{prevEl: '.prev', nextEl: '.next'}"
     :pagination="{ type: 'fraction', el: '.pagination' }"
-    :scrollbar="{ draggable: true }"
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
@@ -34,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-  import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+  import { Navigation, Pagination } from 'swiper/modules';
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
   // Import Swiper styles
@@ -57,7 +56,7 @@
       default: () => []
     }
   });
-  const modules = [Navigation, Pagination, Scrollbar, A11y];
+  const modules = [Navigation, Pagination];
 
   function getClassAndStyle (str: string) {
     // props.height

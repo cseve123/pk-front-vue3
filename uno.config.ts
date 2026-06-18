@@ -19,7 +19,8 @@ export default defineConfig({
   ],
   // 全局设置的
   shortcuts: {
-    'route-link': 'text-white text-2xl px-8 py-2 cursor font-300 hover:font-500'
+    'route-link': 'text-white text-2xl px-8 py-2 cursor font-300 hover:font-500',
+    'bg-image': 'w-full h-full bg-cover bg-no-repeat bg-center-top',
   }
 
 })
