@@ -14,10 +14,22 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
-    <!-- <script>
+    <script>
       if (/iPhone|Android|Windows Phone/i.test(navigator.userAgent)) {
-        document.body.classList.add('mobile');
+        document.body.classList.add('mobile-device');
       }
+    </script>
+    <!-- <script>
+      function setFontSize() {
+        // 16就是基数，1rem等于16px，1920是设计稿的宽度
+        document.documentElement.style.fontSize = (document.documentElement.clientWidth / 1920) * 16 + 'px';
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        setFontSize();
+        window.onresize = () => {
+          setFontSize();
+        }
+      })
     </script> -->
   </body>
 </html>

@@ -15,9 +15,9 @@
         <div class="w-full h-full bg-cover bg-no-repeat bg-center-top"
         :style="{ backgroundImage: `url(${item.image})` }">
           <Container class="h-full">
-            <div class=" flex flex-col items-start justify-center">
-              <p class="text-4xl font-bold text-white">{{ item.title }}</p>
-              <p class="text-xl text-gray-100 pt-4">{{ item.subtitle }}</p>
+            <div class=" flex flex-col items-start justify-center lt-sm:px-4">
+              <p class="text-xl sm:text-4xl font-bold text-white">{{ item.title }}</p>
+              <p class="text-sm sm:text-xl text-gray-100 pt-4">{{ item.subtitle }}</p>
             </div>
           </Container>
         </div>
